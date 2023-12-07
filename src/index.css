@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  ::after,
+  ::before {
+    @apply m-0 p-0 box-border;
+  }
+
+  body {
+    @apply text-grey-100 bg-grey-900 font-custom leading-6 text-sm;
+  }
+
+  ul {
+    @apply list-none;
+  }
+
+  a {
+    @apply no-underline;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply tracking-wide capitalize leading-5 mb-3;
+  }
+
+  h1 {
+    @apply text-5xl;
+  }
+
+  h2 {
+    @apply text-4xl font-bold;
+  }
+
+  h3 {
+    @apply text-lg;
+  }
+
+  h4 {
+    @apply text-sm;
+  }
+
+  p {
+    @apply mb-5 text-grey-500;
+  }
+
+  @media screen and (min-width: 800px) {
+    h1 {
+      @apply text-4xl;
+    }
+
+    h2 {
+      @apply text-2xl;
+    }
+
+    h3 {
+      @apply text-2xl;
+    }
+
+    h4 {
+      @apply text-base;
+    }
+
+    body {
+      @apply text-base;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      @apply leading-none;
+    }
+  }
+}
+
+@layer components {
+  .menu {
+    @apply py-20;
+  }
+
+  .section {
+    @apply w-[90vw] mx-auto max-w-1170;
+  }
+
+  @media screen and (min-width: 992px) {
+    .section {
+      @apply w-[95vw];
+    }
+  }
+}
+
+@layer utilities {
+  .title {
+    @apply text-center mb-8;
+  }
+
+  .underline {
+    @apply bg-gold w-20 h-1 mx-auto;
+  }
+
+  .btn-container {
+    @apply mb-16 flex justify-center flex-wrap;
+  }
+
+  .filter-btn {
+    @apply text-gold cursor-pointer transition-all duration-300 ease-linear bg-transparent border-transparent capitalize m-0 mx-2 text-lg tracking-wide px-3 py-1.5 rounded-sm;
+  }
+
+  .filter-btn:hover {
+    @apply bg-gold text-white;
+  }
+
+  .section-center {
+    @apply w-[90vw] mx-auto max-w-[1170px] grid gap-y-12 gap-x-8 justify-items-center;
+  }
+
+  .menu-item {
+    @apply grid gap-y-4 gap-x-8 max-w-[25rem];
+  }
+
+  .photo {
+    @apply rounded-sm block object-cover h-48 w-full border-4 border-gold;
+  }
+
+  .item-info header {
+    @apply flex justify-between border-b border-dotted border-grey-500;
+  }
+
+  .item-info h4 {
+    @apply mb-2;
+  }
+
+  .price {
+    @apply text-gold;
+  }
+
+  .item-text {
+    @apply mb-0 pt-4;
+  }
+
+  @media screen and (min-width: 768px) {
+    .menu-item {
+      @apply grid grid-cols-[225px,1fr] gap-x-[1.25rem] max-w-[40rem];
+    }
+
+    .photo {
+      @apply h-[175px];
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .section-center {
+      @apply w-[95vw] grid grid-cols-2;
+    }
+
+    .photo {
+      @apply h-[150px];
+    }
+  }
+}
